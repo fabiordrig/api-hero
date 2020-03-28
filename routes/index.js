@@ -1,12 +1,15 @@
 var express = require("express");
 var router = express.Router();
 
-const users = require("./users.js");
-/* GET home page. */
+const ongs = require("./ongs");
+const incidents = require("./incidents");
+const session = require("./session");
 
-router.use("/users", users);
+router.use("/ongs", ongs);
+router.use("/incidents", incidents);
+router.use("/session", session);
 router.get("/", function(req, res, next) {
-  res.json({ title: "Express" });
+  res.json({ title: "Tem nada" });
 });
 
 module.exports = router;
